@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX in der Webentwicklung</title>
+    <link rel="shortcut icon" href="../doc/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Für Code Block und Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>JSX in der Webentwicklung</h1>
+        <button id="theme-toggle"></button>
+        <nav>
+            <a href="#introduction" data-icon="📖">Einleitung</a>
+            <a href="#details" data-icon="⚙️">Details</a>
+            <a href="#lessons-learned" data-icon="📚">Lessons Learned</a>
+            <a href="#resources" data-icon="📄">Ressourcen</a>
+            <a href="#team" data-icon="👥">Team</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Einleitung</h2>
+            <p>
+                In der Welt der Webentwicklung hat sich in den letzten Jahren ein Trend klar abgezeichnet: die wachsende Beliebtheit und Bedeutung von JavaScript-Frameworks, insbesondere React. Dieses Interesse an React, gepaart mit dem Konzept von JSX, einer Syntaxerweiterung für JavaScript, hat uns dazu bewogen, dieses Thema näher zu erforschen. 
+            </p>
+            <p>
+                Trotz unserer begrenzten Erfahrung mit modernen Frameworks wie React, wurde uns schnell klar, dass die Fähigkeit, effiziente und dynamische Benutzeroberflächen zu erstellen, ein unverzichtbares Werkzeug für jeden Frontend-Entwickler ist. React's einzigartiger Ansatz, bei dem Komponenten und Zustände im Mittelpunkt stehen, sowie die nahtlose Integration von JSX, ermöglicht es Entwicklern, komplexe Anwendungen auf eine intuitive und wartbare Weise zu bauen.
+            </p>
+            <p>
+                Unsere Motivation, uns mit diesem Thema auseinanderzusetzen, stammt aus unserem Wunsch, die aktuellen Trends und Best Practices in der Frontend-Entwicklung zu verstehen und anzuwenden. Durch dieses Projekt hoffen wir, ein tieferes Verständnis für React und JSX zu entwickeln und deren Rolle in der modernen Webentwicklung zu beleuchten.
+            </p>
+        </section>
+
+        <section id="details">
+            <h2>Implementierungsdetails</h2>
+
+            <div class="example-container" id="example1">
+                <h3>Einfaches JSX-Element</h3>
+                <p>
+                    Ein grundlegendes Beispiel für JSX ist das Erstellen eines einfachen Elements, wie in diesem Code-Snippet gezeigt.
+                </p>
+                <pre><code id="elementCode" class="language-js"></code></pre>
+            </div>
+
+            <div class="example-container" id="example2">
+                <h3>Komponenten und Props</h3>
+                <p>
+                    Eines der Kernelemente von React sind Komponenten, die mit Props (Eigenschaften) umgehen. Diese ermöglichen es, wiederverwendbare und anpassbare Elemente zu erstellen.
+                </p>
+                <pre><code id="komponentenPropsCode" class="language-js"></code></pre>
+            </div>
+
+            <div class="example-container" id="example3">
+                <h3>Zustandsmanagement in JSX</h3>
+                <p>
+                    Ein weiteres wichtiges Konzept ist das Zustandsmanagement. React ermöglicht es, den Zustand innerhalb von Komponenten zu verwalten und auf Benutzerinteraktionen zu reagieren.
+                </p>
+                <pre><code id="zustandsmanagementCode" class="language-js"></code></pre>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prevButton" aria-label="Vorheriges Beispiel">&#10094;</button>
+                <button id="nextButton" aria-label="Nächstes Beispiel">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="lessons-learned">
+            <h2>Lessons Learned</h2>
+            <p>
+                Während unserer Auseinandersetzung mit JSX und React haben wir zahlreiche Einsichten gewonnen, die unser Verständnis für moderne Webentwicklung erweitert haben. Einer der größten "Aha-Momente" war die Erkenntnis, wie JSX die Integration von HTML in JavaScript nicht nur ermöglicht, sondern auch intuitiv und leistungsstark gestaltet. Diese Fähigkeit, UI-Komponenten direkt in JavaScript zu deklarieren, hat den Entwicklungsprozess für uns deutlich vereinfacht und beschleunigt.
+            </p>
+            <p>
+                Die in den Codebeispielen demonstrierte Komponenten Logik und das Zustandsmanagement zeigen, wie effektiv React und JSX dabei helfen, komplexe Benutzeroberflächen aufzubauen und zu verwalten. Insbesondere das Zustandsmanagement in React hat uns gezeigt, wie dynamische Benutzerinteraktionen effizient gehandhabt werden können.
+            </p>
+            <p>
+                Trotz anfänglicher Herausforderungen, vor allem beim Verstehen der Komponenten Architektur und des Zustandsmanagements, konnten wir durch praktische Anwendung und stetiges Experimentieren ein solides Verständnis entwickeln. Diese Erfahrungen bestärken uns in der Empfehlung von React und JSX für moderne Webanwendungen. Ihre Fähigkeit, die Entwicklung zu vereinfachen und gleichzeitig leistungsfähige, wartbare und wiederverwendbare UI-Komponenten zu erstellen, macht sie zu einem wertvollen Werkzeug für jeden Frontend-Entwickler.
+            </p>
+        </section>
+        
+
+        <section id="resources">
+            <h2>Weiterführende Ressourcen</h2>
+            <div class="resource-category">
+                <h3><i class="fas fa-blog"></i> Blog-Artikel</h3>
+                <ul>
+                    <li><a href="https://reactjs.org/docs/introducing-jsx.html" target="_blank">Offizielle React-Dokumentation zu JSX</a></li>
+                    <li><a href="https://legacy.reactjs.org/docs/jsx-in-depth.html" target="_blank">JSX In Depth</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-category">
+                <h3><i class="fas fa-video"></i>  Videos</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=l23Nlar1-nc" target="_blank">Einführung in JSX | React Grundlagen</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=9GtB5G2xGTY" target="_blank">What is JSX?</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=K5NZUv-pOrg" target="_blank">JSX in React verwenden</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=FO4couzuJIk" target="_blank">What is JSX?</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=BS9g6Z3lbBU&t=4s" target="_blank">The Power Of JSX</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-category">
+                <h3><i class="fas fa-book"></i> Bücher</h3>
+                <ul>
+                    <li><a href="https://dl.ebooksworld.ir/books/React.Up.and.Running.2nd.Edition.Stoyan.Stefanov.OReilly.9781492051466.EBooksWorld.ir.pdf" target="_blank">"React Up & Running" von Stoyan Stefanov</a></li>
+                    <li><a href="https://www.google.at/books/edition/Learning_React/7KVYDwAAQBAJ?hl=de&gbpv=1&dq=inauthor:%22Kirupa+Chinnathambi%22&printsec=frontcover" target="_blank">"Learning React" von Kirupa Chinnathambi</a></li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <section id="team">
+            <h2>Projektteam</h2>
+            <ul>
+                <li>
+                    <h3>David</h3>
+                    <img src="../doc/dave.jpg" alt="Foto von David Kastner" style="width:200px; height:auto;">
+                    <p>
+                        Softwareentwickler bei Fronius.
+                    </p>
+                </li>
+                <li>
+                    <h3>Maid</h3>
+                    <img src="../doc/maid.jpg" alt="Foto von Maid Alisic" style="width:200px; height:auto;">
+                    <p>
+                        Softwareentwickler bei TeamViewer.
+                    </p>
+                </li>
+            </ul>
+        </section>
+                     
+    </main>
+
+    <footer>
+        <p>Developed with love in Hagenberg, Austria.</p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+</body>
+</html>

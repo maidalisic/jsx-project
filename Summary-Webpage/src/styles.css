@@ -1,0 +1,402 @@
+/* Root variables for light and dark themes */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --accent-color: #007bff;
+    --background-color-dark: #121212;
+    --text-color-dark: #f0f0f0;
+    --accent-color-dark: #333;
+    --font-family: 'Roboto', sans-serif;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --nav-width: 200px;
+    --nav-height: calc(100vh - 70px);
+    --nav-text-light: #DCDCDC;
+    --header-padding: 5rem;
+    --section-padding: 3rem;
+    --resource-padding: 0.7rem;
+    --footer-padding: 1rem;
+    --section-margin: 1rem;
+    --section-max-width: 800px;
+    --button-padding: 10px 20px;
+    --button-radius: var(--border-radius);
+    --button-hover-scale: 1.05;
+    --link-padding: 2px 4px;
+    --link-margin: 5px;
+    --h1-size: 3rem;
+    --h2-size: 2rem;
+    --h3-size: 1.7rem;
+    --normal-text-size: 1.2rem;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 2.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Font sizes */
+p {
+    font-size: var(--normal-text-size);
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h2 {
+    font-size: var(--h3-size);
+}
+
+/* Header styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    padding: var(--header-padding);
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: var(--nav-width);
+    height: var(--nav-height);
+    background-color: transparent;
+    z-index: 10;
+}
+
+nav a {
+    display: block;
+    margin: var(--link-margin) 0;
+    padding: var(--link-padding);
+    color: var(--nav-text-light);
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color var(--transition-speed);
+}
+
+nav a:hover {
+    background-color: var(--accent-color-dark);
+}
+
+nav a.active {
+    color: #000000;
+}
+
+/* Section styles */
+section {
+    padding: var(--section-padding);
+    background-color: var(--background-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    max-width: var(--section-max-width);
+    margin: var(--section-margin) auto;
+}
+
+/* Button styles */
+button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+    background-color: var(--accent-color-dark);
+    transform: scale(var(--button-hover-scale));
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: var(--footer-padding);
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* Theme toggle styles */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+#theme-toggle::before {
+    content: "\263D";
+    font-size: 1.5rem;
+    color: white;
+}
+
+#theme-toggle:hover {
+    background-color: var(--accent-color-dark);
+    transform: scale(var(--button-hover-scale));
+}
+
+#theme-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--text-color);
+}
+
+/* Dark mode specific styles */
+body.dark-theme {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme #theme-toggle,
+body.dark-theme section {
+    color: var(--text-color-dark);
+    background-color: var(--background-color-dark);
+}
+
+body.dark-theme nav a {
+    color: var(--text-color);
+}
+
+body.dark-theme #resources h3,
+body.dark-theme nav a.active {
+    color: var(--text-color-dark);
+}
+
+body.dark-theme nav a.active {
+    color: var(--text-color-dark);
+}
+
+body.dark-theme nav a:hover,
+body.dark-theme button:hover {
+    background-color: var(--accent-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-theme #theme-toggle::before {
+    content: "\2600"; /* Sun symbol for light mode toggle */
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        top: auto;
+    }
+
+    main {
+        margin-right: 0;
+    }
+
+    nav a {
+        padding: var(--link-padding);
+    }
+}
+
+@media screen and (min-width: 601px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (min-width: 380px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* Media query for screens between 600px and 1250px */
+@media screen and (min-width: 601px) and (max-width: 1250px) {
+    nav {
+        width: 80px;
+    }
+
+    nav a {
+        font-size: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        position: relative;
+    }
+
+    nav a::before {
+        content: attr(data-icon);
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    nav a:hover::before {
+        background-color: var(--accent-color-dark);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
+
+    nav a.active::before {
+        background-color: transparent;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
+
+    body.dark-theme nav a.active::before {
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+    }
+}
+
+/* Team styles */
+#team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#team h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#team h3 {
+    font-size: 1.4rem;
+}
+
+#team ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0;
+    list-style: none;
+}
+
+#team li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#team img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Resources styles */
+#resources {
+    max-width: var(--section-max-width);
+    margin: var(--section-margin) auto;
+}
+
+.resource-category {
+    padding: var(--resource-padding);
+    border-radius: var(--border-radius);
+}
+
+.resource-category h3 {
+    color: var(--text-color);
+}
+
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+#resources a:hover {
+    text-decoration: none;
+}
+
+/* Details styles */
+#details .navigation-buttons {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#details button {
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+body.dark-theme #details button {
+    color: var(--text-color-dark);
+}
+
+#details button:hover {
+    color: var(--text-color-dark);
+    background-color: var(--accent-color-dark);
+}
+
+body.dark-theme #details button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+}
